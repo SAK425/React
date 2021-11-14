@@ -5,7 +5,22 @@ import {createStore} from 'redux'
 import Reducer from './reducer/Reducer';
 import {Provider} from 'react-redux';
 import {composeWithDevTools} from 'redux-devtools-extension'
-const store = createStore(Reducer,{products:["iphone11","iphone12","iphone13"],categories:["mobile","headphones","cases"]},composeWithDevTools())
+const chores =[
+  {
+    id:1,
+    text:"Take the medicine"
+  },
+  {
+    id:2,
+    text:"Eat food"
+  },
+  {
+    id:3,
+    text:"Sleep"
+  }
+  
+]
+const store = createStore(Reducer,chores,composeWithDevTools())
 
 ReactDOM.render(
   <React.StrictMode>

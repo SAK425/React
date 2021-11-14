@@ -3,9 +3,10 @@
 const Reducer =(state={},action)=>{
     const {type,payload} = action
 switch(type){
-   case "ADD_PRODUCT":
-           const {products} = state
-       return {...state,products:[...products,payload]}
+   case "Delete_item":
+        return state.filter(item=>item.id!==payload)
+   case "Add_item":
+        return [...state,payload]
     default:
         return state
 }
